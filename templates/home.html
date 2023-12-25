@@ -1,0 +1,71 @@
+{% extends "dining_layout.html" %}
+
+{% block title %}
+Dining Info
+{% endblock %}
+
+{% block content %}
+<div class="summary">
+  Summary on {{date.strftime("%A, %d %B, %Y at %X")}}
+  <br><br>
+  {{FerrisMsg}}
+  <br>
+  {{FacHouseMsg}}
+  <br>
+  {{ChefMikesMsg}}
+  <br>
+</div>
+<div class="w3-row-padding w3-center w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:400px">
+    <h3>Fac House</h3>
+    <div class="list">{{ FacHouse }}</div>
+    <br>
+    </div>
+  </div>
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:400px">
+    <h3>Chef Mike's</h3>
+    <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:10px"></i>
+      <div class="list">{{ ChefMikes }}</div>
+      <br>
+    </div>
+  </div>
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:400px">
+    <h3>JJs</h3>
+    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:10px"></i>
+    <div class="list">{{ JJs }}</div>
+    <br>
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-center w3-margin-top">
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:400px">
+      <h3>Ferris</h3>
+      <div class="list">{{ Ferris }}</div>
+      <br>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:400px">
+      <h3>John Jay</h3>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:10px"></i>
+      <div class="list">{{ JohnJay }}</div>
+      <br>
+      </div>
+    </div>
+    
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:400px">
+      <h3>Grace Dodge</h3>
+      <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:10px"></i>
+      <div class="list">{{ GraceDodge }}</div>
+      <br>
+      </div>
+    </div>
+</div>
+
+{{msg}}
+{% endblock %}
